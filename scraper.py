@@ -9,28 +9,28 @@ driver.get("https://www.daraz.pk/")
 
 time.sleep(5)
 
-# search product
+
 search = driver.find_element(By.NAME, "q")
 search.send_keys("laptop")
 search.send_keys(Keys.RETURN)
 
 time.sleep(5)
 
-# lists for data
+
 names = []
 prices = []
 
-# product blocks (more stable approach)
+
 products = driver.find_elements(By.CSS_SELECTOR, "div[data-qa-locator='product-item']")
 
 for product in products:
     try:
-        name = product.text.split("\n")[0]  # first line usually name
+        name = product.text.split("\n")[0]  
     except:
         name = "N/A"
 
     try:
-        price = product.text.split("\n")[1]  # second line usually price
+        price = product.text.split("\n")[1]
     except:
         price = "N/A"
 
@@ -39,7 +39,7 @@ for product in products:
 
 driver.quit()
 
-# save to CSV
+
 df = pd.DataFrame({
     "Product Name": names,
     "Price": prices
