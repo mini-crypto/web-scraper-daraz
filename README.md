@@ -6,7 +6,7 @@
 * **Tools Used:** Python, Selenium, Pandas
 
 ### 2. Setup Instructions
-1. Clone this repo: `git clone https://github.com/your-username/your-repo-name.git`
+1. Clone this repo: `git clone https://github.com/mini-crypto/web-scraper-daraz.git`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run script: `python scraper.py`
 
